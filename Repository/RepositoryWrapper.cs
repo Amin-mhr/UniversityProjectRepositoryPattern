@@ -7,7 +7,7 @@ namespace Repository
 {
     public class RepositoryWrapper : IRepositoryWrapper
     {
-        private UniversityDbContext _context;
+        private UniversityDbContext _context ;
         private IAdminRepository _admin;
         private ICourseRepository _course;
         private IEnrollRepository _enroll;
@@ -82,6 +82,11 @@ namespace Repository
                 }
                 return _universityClass;
             }
+        }
+
+        public RepositoryWrapper(UniversityDbContext Context)
+        {
+            _context = Context; 
         }
 
         public void save()

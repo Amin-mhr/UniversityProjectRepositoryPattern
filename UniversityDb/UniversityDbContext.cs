@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using University.Db.Model;
-
+using UniversityDb.Entities;
 
 namespace UniversityDb
 {
@@ -12,7 +11,6 @@ namespace UniversityDb
         public DbSet<UniversityClass> UniversityClasses { get; set; }
         public DbSet<Enroll> Enrolls { get; set; }
         public DbSet<Admin> Admins { get; set; }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,10 +25,10 @@ namespace UniversityDb
                 .ValueGeneratedNever();
         }
 
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=localhost;Database=UniversityDb;Trusted_Connection=True;");
         }
+
     }
 }

@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using University.Repository.Interface;
+﻿using University.Contract.IEntityRepository;
 
-namespace University.Repository
+
+namespace University.Contract
 {
     public interface IRepositoryWrapper
     {
